@@ -1,0 +1,51 @@
+INFOZATECH CYBER SECURITY INTERNSHIP
+
+TASK 3: LOCAL NETWORK PORT SCANNER (EDUCATIONAL)
+
+1. OBJECTIVE
+
+To develop a simple Python-based port scanner that checks common TCP ports on a target host and displays their status and typical services.
+
+2. TOOLS AND TECHNOLOGIES
+
+* Programming Language: Python
+* IDE: Python IDLE
+* Module: socket
+* Operating System: Windows
+
+3. DESCRIPTION
+
+The Local Network Port Scanner checks a predefined list of common TCP ports on a target IP address. The program uses Python's socket module to attempt connections and identify ports that are confirmed open.
+
+The program defaults to 127.0.0.1, which refers to the local computer. It displays the port number, connection status, and typical service associated with each port. Basic error handling is included for connection failures and timeouts.
+
+4. TESTING AND RESULTS
+
+The program was tested on the local computer using the target IP address 127.0.0.1.
+
+The scan reported the following ports as open:
+
+* Port 80 — HTTP
+* Port 110 — POP3
+* Port 135 — Windows RPC
+* Port 445 — Windows SMB
+
+The other selected ports were reported as "NOT CONFIRMED OPEN".
+
+The scan completed successfully and displayed the total number of ports reported open: 4.
+
+Note: "NOT CONFIRMED OPEN" does not necessarily mean a port is closed. It means the program did not confirm that the port was open during the scan.
+
+5. ERROR HANDLING
+
+The program includes basic handling for connection errors, timeouts, and invalid IPv4 addresses. These messages help prevent the program from stopping unexpectedly when a connection cannot be established.
+
+6. SECURITY SUMMARY
+
+Open ports provide access to network services. Unnecessary or insecure services may create security risks. Each open service should be checked to ensure it is necessary, updated, and properly protected. Port scanning should only be performed on systems owned by the user or systems for which explicit permission has been granted.
+
+7. CONCLUSION
+
+The Local Network Port Scanner was implemented and tested successfully on a Windows computer using Python. It identified four open ports on the local host, displayed their typical services, and provided a short security summary. This task demonstrates the basic use of Python sockets for educational network security testing.
+
+Developed as part of the InfozaTech Cyber Security Internship.
