@@ -1,0 +1,31 @@
+TASK 3: LOCAL NETWORK PORT SCANNER
+
+Internship: InfozaTech Cybersecurity Internship
+
+OBJECTIVE
+To create a Python program that checks selected ports on my own Windows computer.
+
+TOOLS USED
+
+* Python 3.15
+* Python IDLE
+* Socket module
+
+HOW IT WORKS
+
+1. The program targets localhost (127.0.0.1).
+2. It checks selected ports using socket connections.
+3. It displays whether each port is open or closed.
+4. It identifies the typical service associated with each port.
+
+WHY OPEN PORTS MATTER IN CYBERSECURITY
+Open ports may indicate services accepting network connections. Unnecessary or improperly secured services can increase security risks. Reviewing open ports helps users identify services that may need further security checks.
+
+TESTING
+The program was tested on my own Windows computer.
+
+LIMITATIONS
+The program checks only selected ports. An open port does not automatically indicate a security vulnerability.
+
+CONCLUSION
+This project helped me practise Python socket programming and understand the basics of defensive cybersecurity.
