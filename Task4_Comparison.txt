@@ -1,0 +1,49 @@
+Classical vs Modern Encryption
+
+| Feature           | Caesar Cipher (Classical)                              | AES (Modern)                      |
+| ----------------- | ------------------------------------------------------ | --------------------------------- |
+| Encryption type   | Substitution cipher                                    | Symmetric encryption              |
+| Key               | Number (shift value)                                   | Secret password-derived key       |
+| Security          | Very weak                                              | Strong when implemented correctly |
+| Key possibilities | Only 25 useful shifts                                  | Extremely large key space         |
+| Speed             | Very fast and simple                                   | Efficient for modern data         |
+| Main weakness     | Easily cracked using brute force or frequency analysis | Requires secure key management    |
+| Usage             | Learning cryptography                                  | Protecting sensitive information  |
+
+
+
+
+Strengths and weaknesses
+
+1. Caesar Cipher
+
+Strengths:
+
+> Easy to understand and implement.
+> Very fast.
+> Useful for learning basic cryptography.
+
+Weaknesses:
+
+> Only 25 possible shifts.
+> Easily broken by attackers.
+> Not suitable for protecting sensitive data.
+
+2. AES-based modern encryption
+
+Strengths:
+
+> Provides strong security when properly implemented.
+> Suitable for protecting sensitive information.
+> Supports secure password-based key derivation.
+
+Weaknesses:
+
+> More complex to implement.
+> Requires secure password and key management.
+> Incorrect implementation can introduce security weaknesses.
+
+
+Conclusion
+
+Modern encryption is much more secure than classical encryption. Caesar Cipher is useful for understanding the basics of cryptography, whereas AES-based encryption is suitable for real-world data protection.
