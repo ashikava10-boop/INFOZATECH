@@ -1,0 +1,157 @@
+ INFOZATECH – CYBER SECURITY INTERNSHIP
+ TASK 5: PHISHING URL DETECTOR
+
+Project Title: Phishing URL Detector
+
+Internship Domain: Cyber Security
+
+Programming Language: Python
+
+ 1. INTRODUCTION
+
+Phishing is a type of cyberattack in which attackers create fake websites or URLs to steal sensitive information such as usernames, passwords, and banking details.
+
+The Phishing URL Detector is a Python-based educational project that identifies potentially suspicious URLs using URL features and a machine learning classification algorithm.
+
+The project uses a Naive Bayes classifier to estimate whether a URL is likely to be phishing or legitimate.
+
+ 2. OBJECTIVES
+
+- To identify potentially suspicious and legitimate URLs.
+- To extract important URL features.
+- To implement a simple machine learning classification model.
+- To develop a tool that accepts URLs from users and displays a risk assessment.
+- To evaluate the model and understand its limitations.
+
+ 3. DATASET COLLECTION
+
+A labeled dataset containing phishing and legitimate URL examples was created for this educational project.
+
+The dataset contains:
+
+- Phishing URLs (Label 1).
+- Legitimate URLs (Label 0).
+
+The dataset is stored in a CSV file named `phishing_dataset.csv`.
+
+Note: The included dataset is a small synthetic demonstration dataset. It is not a verified collection of real-world phishing URLs.
+
+ 4. FEATURE EXTRACTION
+
+The following URL features are extracted:
+
+1. URL Length: Measures the total number of characters in the URL. Unusually long URLs can sometimes be suspicious.
+
+2. @ Symbol: Checks whether the URL contains the '@' symbol, which can be used in deceptive URLs.
+
+3. HTTPS Presence: Checks whether the URL uses HTTPS. HTTPS encrypts the connection, but it does not guarantee that a website is legitimate.
+
+4. Domain Age: The program attempts to retrieve domain registration information using RDAP. The information may be unavailable because of network, RDAP service, or domain-registration limitations.
+
+ 5. MACHINE LEARNING MODEL
+
+The project uses the Naive Bayes classification algorithm.
+
+Naive Bayes is a supervised machine learning algorithm based on probability.
+
+The model is trained using the extracted URL features and their corresponding labels. It then estimates whether a URL is likely to be phishing or legitimate.
+
+The model's output is an estimate based on the small demonstration dataset and should not be treated as a definitive security decision.
+
+ 6. URL DETECTION TOOL
+
+A simple interactive tool was developed using Python.
+
+The user can:
+
+1. Run the Python program.
+2. Select the URL-checking option.
+3. Paste a website URL.
+4. View the extracted URL features.
+5. Receive a phishing probability and risk assessment.
+
+The tool displays a risk assessment such as:
+
+- HIGH RISK
+- LOWER MODEL-ESTIMATED RISK
+
+The program also displays a note that its result is not a security guarantee.
+
+ 7. MODEL EVALUATION
+
+The dataset was divided into training and testing samples.
+
+Evaluation Results:
+
+- Training Samples: 18
+- Testing Samples: 6
+- Correct Predictions: 6
+- Observed Accuracy: 100%
+
+Confusion Matrix:
+
+| Metric | Result |
+|---|---:|
+| True Positive | 3 |
+| True Negative | 3 |
+| False Positive | 0 |
+| False Negative | 0 |
+
+The model correctly classified all six examples in this test set.
+
+Important Note: The test set contains only six samples, and the dataset is synthetic and small. Therefore, the observed 100% accuracy does not establish that the model will achieve 100% accuracy on real-world URLs.
+
+ 8. TESTING RESULTS
+
+ Test Case 1: Legitimate Demonstration URL
+
+URL: https://www.google.com
+
+Observed Output:
+
+- URL Length: 22
+- @ Symbol: No
+- HTTPS: Yes
+- Domain Age: 10,644 days
+- Domain Age Category: Established
+- Phishing Probability: 9.09%
+- Risk Assessment: LOWER MODEL-ESTIMATED RISK
+
+ Test Case 2: Suspicious Demonstration URL
+
+URL: http://secure-login.example.invalid/account
+
+Observed Output:
+
+- URL Length: 43
+- @ Symbol: No
+- HTTPS: No
+- Domain Age: Could not retrieve
+- Domain Age Category: Unknown
+- Phishing Probability: 90.91%
+- Risk Assessment: HIGH RISK
+
+Note: The second URL uses the reserved `.invalid` domain for safe demonstration purposes. It is not a real phishing website. The RDAP lookup returned an HTTP 404 response for this test domain, and the program handled the unavailable domain-age information without crashing.
+
+The probabilities and risk labels above are the observed outputs in the test screenshots. They are model estimates, not proof that a URL is safe or malicious.
+
+ 9. LIMITATIONS
+
+- The dataset is small and synthetic.
+- The model may not identify new or unseen phishing patterns.
+- Some legitimate websites may be incorrectly classified.
+- Some phishing websites may not be detected.
+- Domain-age retrieval depends on internet connectivity and RDAP availability.
+- HTTPS does not guarantee that a website is trustworthy.
+- The model's evaluation uses only six test samples.
+- The project is an educational prototype and should not be used as the only method of website security verification.
+
+ 10. CONCLUSION
+
+The Phishing URL Detector project demonstrates how Python and machine learning can be used to estimate the risk of potentially suspicious URLs.
+
+The project includes dataset preparation, feature extraction, Naive Bayes classification, an interactive URL-checking tool, and model evaluation.
+
+Through this project, I gained practical knowledge of basic machine learning concepts and their application in cybersecurity.
+
+Project Status: Completed
